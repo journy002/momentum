@@ -1,6 +1,30 @@
 body{
     background: #ddd;
 }
+body,ul,li{
+    padding: 0;
+    margin: 0;
+    list-style: none
+}
+
+h1{
+    font-size: 32px;
+    color: #fff;
+}
+
+.js-gretting{
+    color: yellow;
+}
+
+.todoList li{
+    color: #fff;
+}
+
+.todoList li span{
+    display: inline-block;
+    margin-right: 10px;
+}
+
 .form,
 .gretting{
     display: none;
