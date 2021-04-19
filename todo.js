@@ -13,13 +13,14 @@ function deleteTodo(event){
     const del = event.target;
     const li = del.parentNode;
     todoList.removeChild(li);
-    
     const cleanTodo = todos.filter(function(todo){
         return todo.id !== parseInt(li.id);
     });
     todos = cleanTodo
     saveTodo();
 }
+
+let idNumbers = 1;
 
 function todoComponent(text){
     const li = document.createElement('li');
@@ -31,7 +32,8 @@ function todoComponent(text){
     li.appendChild(span);
     li.appendChild(delBtn);
     todoList.appendChild(li);
-    const newId = todos.length + 1;
+    const newId = idNumbers;
+    idNumbers += 1;
     li.id = newId;
     const liObj = {
         text: text,
