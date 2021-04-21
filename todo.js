@@ -62,25 +62,30 @@ function loadedTodo(){
 };
 
 // input값의 길이를 알고싶으면 변화를 감지해주는 event가 필요하다.
-todoInput.addEventListener('change', e => {
-    console.log('length', e.target.value.length);
-});
-console.log('leng', todoInput.value.length);
+// todoInput.addEventListener('change', e => {
+//     console.log('length', e.target.value.length);
+// });
+// console.log('leng', todoInput.value.length);
 
-function loadCancel(){
-    todoInput.addEventListener('change', e => {
-        if( e.target.value.length >= 5){
-            const canBtn = document.createElement('button');
-            canBtn.innerText = 'x';
-            todoForm.appendChild(canBtn);
-        }
-    });
-    
-}
+// const canBtn = document.createElement('button');
+// function clkCan(event){
+//     todoForm.removeChild(canBtn);
+//     todoInput.value = '';
+// }
+// function loadCancel(){
+//     todoInput.addEventListener('change', e => {
+//         if( e.target.value.length >= 5){
+//             canBtn.innerText = 'x';
+//             todoForm.appendChild(canBtn);
+//         }
+//     });
+//     canBtn.addEventListener('click', clkCan);
+//     console.log('loadCancelllll');
+// }
 
 function init(){
     loadedTodo();
-    loadCancel();
+    //loadCancel();
     todoForm.addEventListener('submit',loadedInput);
 };
 
