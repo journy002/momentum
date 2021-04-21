@@ -41,9 +41,7 @@ function toDoList(text){
         }
         todos.push(todoObj);
         saveTodo();
-    } else if(text < 1) {
-        alert('1글자 이상 적어주세요.');
-    }
+    } 
 }
 
 function loadedInput(event){
@@ -59,19 +57,30 @@ function loadedTodo(){
         const parse = JSON.parse(TodoList);
         parse.forEach(function(todo){
             toDoList(todo.text);
-        })
-    }
-}
+        });
+    };
+};
 
-// function loadCancel(){
-//     const cancelBnt = document.createElement('button');
-//     cancelBnt.addEventListener('click',cancelHandler);
-//     cancelBnt.innerText = 'x';
-// }
+// input값의 길이를 알고싶으면 변화를 감지해주는 event가 필요하다.
+todoInput.addEventListener('change', e => {
+    console.log('length', e.target.value.length);
+});
+console.log('leng', todoInput.value.length);
+
+function loadCancel(){
+    todoInput.addEventListener('change', e => {
+        if( e.target.value.length >= 5){
+            const canBtn = document.createElement('button');
+            canBtn.innerText = 'x';
+            todoForm.appendChild(canBtn);
+        }
+    });
+    
+}
 
 function init(){
     loadedTodo();
-    // loadCancel();
+    loadCancel();
     todoForm.addEventListener('submit',loadedInput);
 };
 
