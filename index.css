@@ -1,13 +1,14 @@
 body,p,span,h1,a{margin: 0;padding: 0;list-style: none;}
 body{ background-color: #eee;}
 .inner-wrap{display: flex;flex-direction: column;justify-content: center;height: 100vh;}
-.inner-wrap .inner-box{margin: 0 auto;}
+.inner-wrap .inner-box{margin: 0 auto;text-align: center;}
 .inner-wrap .inner-box h1{color: #fff;}
 .inner-wrap .inner-box .js-gretting{margin: 10px 0;color: #fff;font-size: 24px;}
 .inner-wrap .inner-box .js-todoList{padding-left: 10px;width: 100%;box-sizing: border-box;}
 .inner-wrap .inner-box .js-todoList li{display: flex;justify-content: space-between;list-style: none;margin-bottom: 10px;color: #fff;}
+.inner-wrap .inner-box .js-todoList li span{padding-right: 10px;}
 .inner-wrap .inner-box .js-todoForm input{padding: 10px;border: 2px solid skyblue;border-radius: 6px;outline: none;color: #8c8686;}
 .form,
 .gretting{display: none;}
-.showing{display: flex;margin: 20px 0;}
+.showing{display: block;margin: 20px 0;}
 .bgImage{position: absolute;width: 100%;height: 100%;top: 0;bottom: 0;left: 0;right: 0;z-index: -1;}
