@@ -23,23 +23,27 @@ function loadDelBtn(event){
 let idNumber = 1;
 
 function toDoList(text){
-    const li = document.createElement('li');
-    const delBtn = document.createElement('button');
-    const span = document.createElement('span');
-    const newId = idNumber++;
-    span.innerText = text;
-    delBtn.innerText = 'x';
-    delBtn.addEventListener('click', loadDelBtn);
-    li.appendChild(span);
-    li.appendChild(delBtn);
-    li.id = newId;
-    todoList.appendChild(li);
-    const todoObj = {
-        text:text,
-        id:newId,
+    if(text.length > 1){
+        const li = document.createElement('li');
+        const delBtn = document.createElement('button');
+        const span = document.createElement('span');
+        const newId = idNumber++;
+        span.innerText = text;
+        delBtn.innerText = 'x';
+        delBtn.addEventListener('click', loadDelBtn);
+        li.appendChild(span);
+        li.appendChild(delBtn);
+        li.id = newId;
+        todoList.appendChild(li);
+        const todoObj = {
+            text:text,
+            id:newId,
+        }
+        todos.push(todoObj);
+        saveTodo();
+    } else if(text < 1) {
+        alert('1글자 이상 적어주세요.');
     }
-    todos.push(todoObj);
-    saveTodo();
 }
 
 function loadedInput(event){
@@ -59,19 +63,15 @@ function loadedTodo(){
     }
 }
 
-
-function loadCancle(){
-    const inputV = todoInput.value;
-    if(inputV > 5){
-        const Cbtn = document.createElement('button');
-        Cbtn.innerText = 'x'
-        console.log('555');
-    }
-}
+// function loadCancel(){
+//     const cancelBnt = document.createElement('button');
+//     cancelBnt.addEventListener('click',cancelHandler);
+//     cancelBnt.innerText = 'x';
+// }
 
 function init(){
     loadedTodo();
-    loadCancle();
+    // loadCancel();
     todoForm.addEventListener('submit',loadedInput);
 };
 
