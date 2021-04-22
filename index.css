@@ -3,6 +3,7 @@ body{ background-color: #eee;}
 .inner-wrap{display: flex;flex-direction: column;justify-content: center;height: 100vh;}
 .inner-wrap .inner-box{margin: 0 auto;text-align: center;}
 .inner-wrap .inner-box h1{color: #fff;}
+.inner-wrap .inner-box .js-form input{padding: 10px;width: 100%;border: 2px solid seagreen;border-radius: 6px;outline: none;color: #8c8686;box-sizing: border-box;}
 .inner-wrap .inner-box .js-gretting{margin: 10px 0;color: #fff;font-size: 24px;}
 .inner-wrap .inner-box .js-todoList{padding-left: 10px;width: 100%;box-sizing: border-box;}
 .inner-wrap .inner-box .js-todoList li{display: flex;justify-content: space-between;list-style: none;margin-bottom: 10px;color: #fff;}

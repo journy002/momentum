@@ -67,25 +67,8 @@ function loadedTodo(){
 // });
 // console.log('leng', todoInput.value.length);
 
-// const canBtn = document.createElement('button');
-// function clkCan(event){
-//     todoForm.removeChild(canBtn);
-//     todoInput.value = '';
-// }
-// function loadCancel(){
-//     todoInput.addEventListener('change', e => {
-//         if( e.target.value.length >= 5){
-//             canBtn.innerText = 'x';
-//             todoForm.appendChild(canBtn);
-//         }
-//     });
-//     canBtn.addEventListener('click', clkCan);
-//     console.log('loadCancelllll');
-// }
-
 function init(){
     loadedTodo();
-    //loadCancel();
     todoForm.addEventListener('submit',loadedInput);
 };
 
