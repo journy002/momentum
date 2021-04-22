@@ -4,11 +4,11 @@ body{ background-color: #eee;}
 .inner-wrap .inner-box{margin: 0 auto;text-align: center;}
 .inner-wrap .inner-box h1{color: #fff;}
 .inner-wrap .inner-box .js-form input{padding: 10px;width: 100%;border: 2px solid #d6deed;border-radius: 6px;outline: none;color: #8c8686;box-sizing: border-box;}
-.inner-wrap .inner-box .js-gretting{margin: 10px 0;color: #fff;font-size: 24px;}
+.inner-wrap .inner-box .js-gretting{position: absolute;top: 10px;right: 42px;margin: 10px 0;color: #fff;font-size: 24px;}
 .inner-wrap .inner-box .js-todoList{padding-left: 10px;width: 100%;box-sizing: border-box;}
 .inner-wrap .inner-box .js-todoList li{display: flex;justify-content: space-between;list-style: none;margin-bottom: 10px;color: #fff;}
 .inner-wrap .inner-box .js-todoList li span{padding-right: 10px;}
-.inner-wrap .inner-box .js-todoForm{position: relative;}
+.inner-wrap .inner-box .js-todoForm{position: relative;margin-top: 10px;}
 .inner-wrap .inner-box .js-todoForm input{padding: 10px;width: 100%;border: 2px solid skyblue;border-radius: 6px;outline: none;color: #8c8686;box-sizing: border-box;}
 .inner-wrap .inner-box .js-todoForm button{position: absolute;top: 9px;right: 12px;}
 .form,
